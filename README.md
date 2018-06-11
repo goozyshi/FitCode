@@ -7,7 +7,9 @@
 <img src="https://github.com/goozyshi/FitCode/blob/master/%E6%BC%94%E7%A4%BA%E5%9B%BE/%E8%AF%A6%E6%83%85%E9%A1%B5.png">
 </div>
 ### 小程序码
+<div align="center">
 <img src="https://github.com/goozyshi/FitCode/blob/master/%E6%BC%94%E7%A4%BA%E5%9B%BE/FitCode%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A0%81.jpg">
+</div>
 
 ### 仪器码
 <div align="center">

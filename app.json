@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",   
+    "pages/detail/detail"    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTextStyle": "#000",
+    "navigationBarTitleText": "码上健身小程序",
+    "enablePullDownRefresh": false
+  }
+}

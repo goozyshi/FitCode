@@ -1,0 +1,112 @@
+@import '../../comm/style/tab.wxss';
+@import '../../component/nullTip/nullTip.wxss';
+/* pages/index/index.wxss */
+.userinfo {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  margin:15rpx;
+  flex:0.5; 
+}
+.banner {
+  display: flex;
+  flex: 0.75;
+}
+.banner-img {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+}
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.25;
+  background-color: #fff;
+}
+.userinfo-avatar {
+  position: absolute;
+  top: 360rpx;
+  left: 100rpx;
+  width: 128rpx;
+  height: 128rpx;
+  border: 5rpx;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: 50%;
+}
+.nickName {
+  position: absolute;
+  top:500rpx;
+  left: 115rpx;
+}
+.userinfo-profile {
+  display: flex;
+  align-items: flex-end;
+  color: #aaa;
+}
+.scan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.1;
+  border-radius: 4%;
+  background-color: #fff;
+  margin: 15rpx;
+  padding: 10rpx;
+}
+.scanlogo {
+  height: 100%;
+  width: 100%;
+}
+.record {
+  display: flex;
+  flex: 0.4;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius:2%;
+  margin:15rpx;
+  background-color: #fff;
+}
+.record_tab{
+  height:250rpx;
+  width: 700rpx;
+}
+.textborder {
+  position: absolute;
+  bottom:380rpx;
+  left: 40rpx;
+  border-left: 25rpx;
+  border-right: 0rpx;
+  border-top: 0rpx;
+  border-bottom: 0rpx;
+  border-color: #f9ce0e;
+  padding-left: 20rpx;
+  border-style: solid;
+}
+.fit-record-item {
+  background-image: url('https://api.zlcatwu.com/static/Scan.png');
+  opacity: 0.9;
+  background-size: cover;
+  display: flex;
+  flex-direction:column;
+  height: 100%;
+  justify-content:center;
+  align-items: center;
+}
+.record_name {
+  font-family: '微软雅黑';
+  font-weight: bold;
+  margin: 10rpx;
+  color: #fff;
+
+}
+.reccord_tag {
+  font-family: '微软雅黑';
+  font-weight: bold;
+  font-size: 11pt;
+  margin: 10rpx;
+  color: #f3f3f3;
+}

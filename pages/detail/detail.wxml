@@ -1,0 +1,87 @@
+<view class='container'>
+  <block wx:if="{{showLoading}}">
+    <view class="loading">加载中…</view>
+  </block>
+  <block wx:if="{{showContent}}">
+ <!--女生-->
+  <block wx:if="{{mygender ==2}}">
+    <view class='banner_dt' >
+      <image  class='banner_device' src='{{devicemsg.gif.woman}}'></image>
+      <text class='title'>{{devicemsg.muscle.main}}</text>
+      <text class='sm_title'>{{devicemsg.muscle.aside}}</text>
+    </view>
+
+    <view class='msg_card'>    
+      <block wx:if="{{!showMethod}}">
+          <view class='msg_dt'>
+            <text class='tag'>要领</text>
+            <text class='content'>{{devicemsg.main}}</text>
+            
+          </view>
+          <view class='msg_dt'>
+            <text class='tag'>注意事项</text>
+            <text class='content'>{{devicemsg.notice}}</text>
+          </view>
+          <button class='button' catchtap='showMe'>进入训练</button>
+      </block>
+
+      <block wx:else >
+        <view class='msg_card'>
+          <view class='msg_dt'> 
+            <text class='tag'>{{devicemsg.method.woman[0].tag}}</text>
+            <text class='content'>{{devicemsg.method.woman[0].content}}</text>
+          </view>
+          <view class='msg_dt'>
+            <text class='tag'>{{devicemsg.method.woman[1].tag}}</text>
+            <text class='content'>{{devicemsg.method.woman[1].content}}</text>
+          </view>
+          <view class='buttonArray'>
+           <button data-id='力量训练' catchtap="viewRecord">{{devicemsg.method.woman[0].tag}}</button>
+           <button data-id='减脂训练'  catchtap="viewRecord">{{devicemsg.method.woman[1].tag}}训练</button>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block> 
+
+ <!--男生-->
+  <block wx:if="{{mygender ==1}}">
+    <view class='banner_dt' >
+      <image  class='banner_device' src='{{devicemsg.gif.man}}'></image>
+      <text class='title'>{{devicemsg.muscle.main}}</text>
+      <text class='sm_title'>{{devicemsg.muscle.aside}}</text>
+    </view>
+
+    <view class='msg_card'>    
+      <block wx:if="{{!showMethod}}">
+          <view class='msg_dt'>
+            <text class='tag'>要领</text>
+            <text class='content'>{{devicemsg.main}}</text>
+          </view>
+          <view class='msg_dt'>
+            <text class='tag'>注意事项</text>
+            <text class='content'>{{devicemsg.notice}}</text>
+          </view>
+          <button class='button' catchtap='showMe'>进入训练</button>
+      </block>
+
+      <block wx:else >
+        <view class='msg_card'>
+          <view class='msg_dt'>
+          <text class='tag'>{{devicemsg.method.man[0].tag}}</text>
+          <text class='content'>{{devicemsg.method.man[0].content}}</text>
+          </view>
+          <view class='msg_dt'>
+          <text class='tag'>{{devicemsg.method.man[1].tag}}</text>
+          <text class='content'>{{devicemsg.method.man[1].content}}</text>
+          </view>
+         <view class='buttonArray'>
+           <button data-id='局部塑形' catchtap="viewRecord">{{devicemsg.method.man[0].tag}}</button>
+           <button  data-id='增肌训练'  catchtap="viewRecord">{{devicemsg.method.man[1].tag}}训练</button>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block> 
+</block>
+</view>

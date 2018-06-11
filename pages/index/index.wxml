@@ -1,0 +1,42 @@
+ <import src="../../component/nullTip/nullTip.wxml"/>
+<view class='container'>
+  <view class="userinfo">
+    <view class='banner'>
+      <image wx:if="{{userInfo.gender== 2}}" class='banner-img' src='{{female_banner}}' mode='aspectFill'></image> 
+      <image wx:if="{{userInfo.gender == 1}}" class='banner-img' src='{{male_banner}}' mode='aspectFill'></image> 
+    </view>
+
+    <view class='user'>    
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" type='primary'   bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class='nickName'>{{userInfo.nickName}}</text>
+    </block>
+    
+    </view>
+ </view>
+ <!-- 扫码-->
+  <view class='scan'>
+    <image class='scanlogo'  src='/images/scan.png' mode='aspectFit' bindtap='scanQR'></image>
+  </view>
+<!-- 健身记录-->
+  <view class='record'>
+      <text class='textborder'>健身记录</text> 
+      <view hidden="{{show == 'fit_record' ? false : true}}">
+          <block wx:if="{{fit_record.length == 0}}">
+            <template is="nullTip" data="{{nullTip: nullTip}}"/>
+          </block>
+          <block wx:else>
+          
+            <view class='record_tab' wx:key="fit_record">
+              <view class='fit-record-item' data-id='{{fit_record.id}}' bindtap='viewDeviceDetial'>
+                 <text class='record_name'>{{fit_record.name}}</text> 
+                 <text class='reccord_tag'>{{fit_record.muscle.main}}-{{fit_lx}}</text>
+                 <text class='reccord_tag'></text>
+              </view>
+            </view>
+          </block>
+      </view>
+  </view>
+</view>
+

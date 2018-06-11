@@ -1,0 +1,3 @@
+<template name="nullTip">
+    <view class="null-tip">{{nullTip.tipText}}</view>
+</template>
